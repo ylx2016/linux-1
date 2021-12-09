@@ -62,6 +62,7 @@ endif
 
 # rule to build lkl.o
 $(OUTPUT)lib/lkl.o: bin/stat
+	$(Q)$(MAKE) -C ../.. ARCH=lkl $(KOPT) config
 	#$(Q)$(MAKE) -C ../.. ARCH=lkl $(KOPT) $(KCONFIG)
 	#$(Q)$(MAKE) -C ../.. ARCH=lkl $(KOPT) menuconfig
 	#$(Q)$(MAKE) -C ../.. ARCH=lkl $(KOPT) install INSTALL_PATH=$(OUTPUT)
